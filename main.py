@@ -19,3 +19,7 @@ def criar(usuario: Usuario):
 @app.get("/usuarios")
 def root():
     return usuarios
+
+@app.get("/usuarios/{id}")
+def buscar(id: int):
+    return usuarios[id]
